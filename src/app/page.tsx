@@ -160,18 +160,31 @@ export default function Home() {
 
       <div className="flex flex-row gap-32 mt-40 leading-[1.5] tracking-[-0.2]">
         <div className="relative">
-          <div className="absolute h-[65%] translate-y-[40%] mr-24 w-1 bg-gray-100 rounded-full">
+          <div className="absolute h-64 sm:h-80 md:h-96 translate-y-[40%] mr-24 w-1 bg-gray-100 rounded-full">
             <div
               className={cn(
                 'absolute w-full bg-gray-300 rounded-full transition-all duration-300 ease-in-out',
-                'h-[25%]',
+                'h-16', // 1/4 of h-64 (16/64)
                 {
                   'top-0': activeSection === 'multi-chain-support',
-                  'top-[25%]': activeSection === 'flexible-auth',
-                  'top-[50%]': activeSection === 'api-management',
-                  'top-[75%]': activeSection === 'tx-simulation',
+                  'top-1/4': activeSection === 'flexible-auth',
+                  'top-1/2': activeSection === 'api-management',
+                  'top-3/4': activeSection === 'tx-simulation',
                 },
               )}
+              style={{
+                // fallback for top if Tailwind's top-1/4 etc. don't work for custom heights
+                top:
+                  activeSection === 'multi-chain-support'
+                    ? '0'
+                    : activeSection === 'flexible-auth'
+                      ? '25%'
+                      : activeSection === 'api-management'
+                        ? '50%'
+                        : activeSection === 'tx-simulation'
+                          ? '75%'
+                          : undefined,
+              }}
             />
           </div>
 
@@ -219,7 +232,8 @@ export default function Home() {
                   Flexible auth
                 </p>
                 <span className="text-[#6F6F6F] text-lg">
-                  Wallets, OAuth, OTP, magic links—your choice.
+                  Wallets, OAuth, OTP, magic links. <br />
+                  Your choice.
                 </span>
               </div>
 

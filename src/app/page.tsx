@@ -10,6 +10,10 @@ import { cn } from '@/lib/utils'
 export default function Home() {
   const [email, setEmail] = useState<string>('')
 
+  const [activeSection, setActiveSection] = useState<
+    'multi-chain-support' | 'flexible-auth' | 'api-management' | 'tx-simulation'
+  >('multi-chain-support')
+
   return (
     <main className="flex flex-col items-center justify-start gap-40 pt-24 w-full text-center relative overflow-hidden">
       <div className="flex flex-col gap-32">
@@ -60,7 +64,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-32 mt-40 min-h-screen">
+      <div className="flex flex-col gap-32 mt-40">
         <div className="flex flex-col items-center justify-center gap-4">
           <h1 className="text-5xl font-medium text-[#171717] dark:text-white leading-[1.1] tracking-[-0.4]">
             Powerful features, ready to build with
@@ -72,8 +76,8 @@ export default function Home() {
         </div>
 
         <div className="relative w-full max-w-[846px] min-h-[572px] h-[50vw] max-h-[480px] border mx-auto">
-          <div className="absolute h-full w-[382.8px] -left-96 overflow-hidden border-r bg-transparent bg-[linear-gradient(-45deg,rgba(0,0,0,0.01)_40%,rgba(196,213,247,0.5)_40%,rgba(196,213,247,0.5)_45%,rgba(0,0,0,0.01)_45%,rgba(0,0,0,0.01)_90%,rgba(196,213,247,0.5)_90%,rgba(0,0,0,0.01)_95%)] bg-[size:15px_15px]" />
-          <div className="absolute h-full w-[382.8px] -right-96 overflow-hidden border-l bg-transparent bg-[linear-gradient(45deg,rgba(0,0,0,0.01)_40%,rgba(196,213,247,0.5)_40%,rgba(196,213,247,0.5)_45%,rgba(0,0,0,0.01)_45%,rgba(0,0,0,0.01)_90%,rgba(196,213,247,0.5)_90%,rgba(0,0,0,0.01)_95%)] bg-[size:15px_15px]" />
+          <div className="absolute h-full w-[382.8px] -left-96 overflow-hidden border-l bg-transparent bg-[linear-gradient(45deg,rgba(0,0,0,0.01)_40%,rgba(196,213,247,0.5)_40%,rgba(196,213,247,0.5)_45%,rgba(0,0,0,0.01)_45%,rgba(0,0,0,0.01)_90%,rgba(196,213,247,0.5)_90%,rgba(0,0,0,0.01)_95%)] bg-[size:15px_15px]" />
+          <div className="absolute h-full w-[382.8px] -right-96 overflow-hidden border-r bg-transparent bg-[linear-gradient(-45deg,rgba(0,0,0,0.01)_40%,rgba(196,213,247,0.5)_40%,rgba(196,213,247,0.5)_45%,rgba(0,0,0,0.01)_45%,rgba(0,0,0,0.01)_90%,rgba(196,213,247,0.5)_90%,rgba(0,0,0,0.01)_95%)] bg-[size:15px_15px]" />
           <div className="flex flex-row">
             <div className="absolute size-[100px] -left-[calc(6rem+4px)] -top-[calc(6rem+4px)] border-b border-r bg-transparent" />
             <div className="absolute size-[100px] -left-[calc(12rem+4px)] -top-[calc(6rem+4px)] border-b bg-transparent" />
@@ -151,6 +155,116 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="flex flex-row gap-32 mt-40 leading-[1.5] tracking-[-0.2]">
+        <div className="relative">
+          <div className="absolute h-[65%] translate-y-[40%] mr-24 w-1 bg-gray-100 rounded-full">
+            <div
+              className={cn(
+                'absolute w-full bg-gray-300 rounded-full transition-all duration-300 ease-in-out',
+                'h-[25%]',
+                {
+                  'top-0': activeSection === 'multi-chain-support',
+                  'top-[25%]': activeSection === 'flexible-auth',
+                  'top-[50%]': activeSection === 'api-management',
+                  'top-[75%]': activeSection === 'tx-simulation',
+                },
+              )}
+            />
+          </div>
+
+          <div className="flex flex-col gap-12 items-start justify-start text-start">
+            <div className="flex flex-col items-start justify-start text-start gap-4">
+              <h1 className="text-3xl font-medium text-[#171717] dark:text-white leading-[1.1] tracking-[-0.4]">
+                Everything you need, included
+              </h1>
+              <p className="text-lg text-[#797979] dark:text-[#E1E1E1] max-w-lg leading-[1.4] tracking-[-0.1]">
+                No extra tools, no hidden costs — just the complete
+                <br />
+                backend toolkit to build, scale, and ship Web3 apps.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-8 pl-8">
+              <div
+                className="flex flex-col gap-1.5 cursor-pointer"
+                onClick={() => setActiveSection('multi-chain-support')}
+              >
+                <p
+                  className={cn(
+                    'text-[#434343] text-xl font-medium',
+                    activeSection === 'multi-chain-support' && 'text-black',
+                  )}
+                >
+                  Multi-chain Support
+                </p>
+                <span className="text-[#6F6F6F] text-lg">
+                  Instantly connect to BTC, and SOL. <br />
+                  More networks soon.
+                </span>
+              </div>
+
+              <div
+                className="flex flex-col gap-1.5 cursor-pointer"
+                onClick={() => setActiveSection('flexible-auth')}
+              >
+                <p
+                  className={cn(
+                    'text-[#434343] text-xl font-medium',
+                    activeSection === 'flexible-auth' && 'text-black',
+                  )}
+                >
+                  Flexible auth
+                </p>
+                <span className="text-[#6F6F6F] text-lg">
+                  Wallets, OAuth, OTP, magic links—your choice.
+                </span>
+              </div>
+
+              <div
+                className="flex flex-col gap-1.5 cursor-pointer"
+                onClick={() => setActiveSection('api-management')}
+              >
+                <p
+                  className={cn(
+                    'text-[#434343] text-xl font-medium',
+                    activeSection === 'api-management' && 'text-black',
+                  )}
+                >
+                  API Management
+                </p>
+                <span className="text-[#6F6F6F] text-lg">
+                  Manage and monitor your APIs easily.
+                </span>
+              </div>
+
+              <div
+                className="flex flex-col gap-1.5 cursor-pointer"
+                onClick={() => setActiveSection('tx-simulation')}
+              >
+                <p
+                  className={cn(
+                    'text-[#434343] text-xl font-medium',
+                    activeSection === 'tx-simulation' && 'text-black',
+                  )}
+                >
+                  TX simulation
+                </p>
+                <span className="text-[#6F6F6F] text-lg">
+                  Preview transactions before sending.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative w-full max-w-[745px] min-h-[240px] h-[50vw] max-h-[572px] border translate-x-2/6">
+          <div className="absolute size-[60px] sm:size-[100px] -left-[calc(2.5rem+2px)] sm:-left-[calc(6rem+4px)] -top-[calc(2.5rem+2px)] sm:-top-[calc(6rem+4px)] border-b border-r bg-transparent" />
+          <div className="absolute size-[60px] sm:size-[100px] -left-[calc(2.5rem+2px)] sm:-left-[calc(6rem+4px)] -bottom-[calc(2.5rem+2px)] sm:-bottom-[calc(6rem+4px)] border-t border-r bg-transparent" />
+
+          <div className="bg-white w-[745px] h-full" />
         </div>
       </div>
     </main>

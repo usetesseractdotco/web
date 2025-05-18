@@ -6,17 +6,17 @@ import { useEffect, useState } from 'react'
 
 export function Texture() {
   const { resolvedTheme } = useTheme()
-  const [image, setImage] = useState<string | null>(null)
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
-    setImage(`/${resolvedTheme}-dots.png`)
-  }, [resolvedTheme])
+    setIsMounted(true)
+  }, [])
 
-  if (!image) return null
+  if (!isMounted) return null
 
   return (
     <Image
-      src={image}
+      src={`/${resolvedTheme}-dots.png`}
       alt="Texture"
       fill
       className="object-cover opacity-50"

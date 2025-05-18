@@ -5,7 +5,7 @@ import { Button } from './ui/button'
 
 export function Header() {
   return (
-    <header className="flex w-full px-40 py-6 justify-between items-center h-[8.75rem]">
+    <header className="sticky top-0 left-0 right-0 z-50 flex w-full px-40 py-6 justify-between items-center bg-background/10 backdrop-blur-sm border-b border-border/10">
       <Image
         src="/logo.svg"
         alt="logo"
@@ -31,7 +31,7 @@ export function Header() {
         </div>
       </nav>
 
-      <Button>Start Building Now</Button>
+      <Button>Join Waitlist</Button>
     </header>
   )
 }

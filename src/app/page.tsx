@@ -16,21 +16,21 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center justify-start gap-40 pt-24 w-full text-center relative overflow-hidden">
-      <div className="flex flex-col gap-32">
-        <div className="flex flex-col gap-12 items-center justify-center max-w-3xl mx-auto">
+      <div className="flex flex-col gap-32 px-6 md:px-0">
+        <div className="flex flex-col md:gap-12 gap-8 items-center justify-center max-w-3xl mx-auto">
           <div className="flex flex-col items-center justify-center gap-4">
-            <h1 className="text-7xl font-medium text-[#171717] dark:text-white leading-[1.1] tracking-[-0.4]">
+            <h1 className="text-4xl md:text-7xl font-medium text-[#171717] dark:text-white leading-[1.1] tracking-[-0.4]">
               Simplified Backend for
               <br /> Blockchain Apps
             </h1>
-            <p className="text-2xl text-[#797979] dark:text-[#E1E1E1] max-w-xl leading-[1.4] tracking-[-0.1]">
+            <p className="text-base md:text-2xl text-[#797979] dark:text-[#E1E1E1] max-w-sm md:max-w-xl leading-[1.4] tracking-[-0.1]">
               Tesseract is an open-source, self-hostable platform that removes
               the complexity of blockchain infrastructure.
             </p>
           </div>
 
           <div className="flex gap-4 h-fit items-center justify-center">
-            <div className="relative flex-1 min-w-xs">
+            <div className="hidden relative md:block flex-1 min-w-xs">
               <Input
                 type="email"
                 placeholder="Enter your email"

@@ -31,7 +31,7 @@ export function ClipPathButton({
         onAnimationComplete={() => setIsAnimationEnded(true)}
         aria-hidden="true"
         className={cn(
-          'absolute bg-primary inset-0 flex items-center justify-center gap-2 text-foreground',
+          'absolute bg-primary inset-0 flex items-center justify-center gap-2 text-primary-foreground',
         )}
         initial={{
           clipPath: 'inset(0px 100% 0px 0px)',

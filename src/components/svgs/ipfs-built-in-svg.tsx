@@ -1,4 +1,9 @@
+import { useTheme } from 'next-themes'
+
 export function IPFSBuiltInSVG() {
+  const { resolvedTheme } = useTheme()
+  const isDark = resolvedTheme === 'dark'
+
   return (
     <>
       <div className="md:block hidden w-full h-full">
@@ -9,20 +14,90 @@ export function IPFSBuiltInSVG() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <rect y="30.6" width="382" height="1" fill="#D9D9D9" />
-          <rect y="61.2" width="382" height="1" fill="#D9D9D9" />
-          <rect y="91.8" width="382" height="1" fill="#D9D9D9" />
-          <rect y="122.4" width="382" height="1" fill="#D9D9D9" />
-          <rect x="34.6362" width="1" height="154" fill="#D9D9D9" />
-          <rect x="69.2729" width="1" height="154" fill="#D9D9D9" />
-          <rect x="103.909" width="1" height="154" fill="#D9D9D9" />
-          <rect x="138.545" width="1" height="154" fill="#D9D9D9" />
-          <rect x="173.182" width="1" height="154" fill="#D9D9D9" />
-          <rect x="207.818" width="1" height="154" fill="#D9D9D9" />
-          <rect x="242.454" width="1" height="154" fill="#D9D9D9" />
-          <rect x="277.091" width="1" height="154" fill="#D9D9D9" />
-          <rect x="311.728" width="1" height="154" fill="#D9D9D9" />
-          <rect x="346.363" width="1" height="154" fill="#D9D9D9" />
+          <rect
+            y="30.6"
+            width="382"
+            height="1"
+            fill={isDark ? '#262626' : '#D9D9D9'}
+          />
+          <rect
+            y="61.2"
+            width="382"
+            height="1"
+            fill={isDark ? '#262626' : '#D9D9D9'}
+          />
+          <rect
+            y="91.8"
+            width="382"
+            height="1"
+            fill={isDark ? '#262626' : '#D9D9D9'}
+          />
+          <rect
+            y="122.4"
+            width="382"
+            height="1"
+            fill={isDark ? '#262626' : '#D9D9D9'}
+          />
+          <rect
+            x="34.6362"
+            width="1"
+            height="154"
+            fill={isDark ? '#262626' : '#D9D9D9'}
+          />
+          <rect
+            x="69.2729"
+            width="1"
+            height="154"
+            fill={isDark ? '#262626' : '#D9D9D9'}
+          />
+          <rect
+            x="103.909"
+            width="1"
+            height="154"
+            fill={isDark ? '#262626' : '#D9D9D9'}
+          />
+          <rect
+            x="138.545"
+            width="1"
+            height="154"
+            fill={isDark ? '#262626' : '#D9D9D9'}
+          />
+          <rect
+            x="173.182"
+            width="1"
+            height="154"
+            fill={isDark ? '#262626' : '#D9D9D9'}
+          />
+          <rect
+            x="207.818"
+            width="1"
+            height="154"
+            fill={isDark ? '#262626' : '#D9D9D9'}
+          />
+          <rect
+            x="242.454"
+            width="1"
+            height="154"
+            fill={isDark ? '#262626' : '#D9D9D9'}
+          />
+          <rect
+            x="277.091"
+            width="1"
+            height="154"
+            fill={isDark ? '#262626' : '#D9D9D9'}
+          />
+          <rect
+            x="311.728"
+            width="1"
+            height="154"
+            fill={isDark ? '#262626' : '#D9D9D9'}
+          />
+          <rect
+            x="346.363"
+            width="1"
+            height="154"
+            fill={isDark ? '#262626' : '#D9D9D9'}
+          />
           <g clipPath="url(#clip0_267_135)">
             <mask
               id="mask0_267_135"
@@ -285,98 +360,98 @@ export function IPFSBuiltInSVG() {
             y="23.7753"
             width="292.274"
             height="0.765116"
-            fill="#D9D9D9"
+            fill={isDark ? '#262626' : '#D9D9D9'}
           />
           <rect
             x="0.362305"
             y="47.1879"
             width="292.274"
             height="0.765116"
-            fill="#D9D9D9"
+            fill={isDark ? '#262626' : '#D9D9D9'}
           />
           <rect
             x="0.362305"
             y="70.6005"
             width="292.274"
             height="0.765116"
-            fill="#D9D9D9"
+            fill={isDark ? '#262626' : '#D9D9D9'}
           />
           <rect
             x="0.362305"
             y="94.0131"
             width="292.274"
             height="0.765116"
-            fill="#D9D9D9"
+            fill={isDark ? '#262626' : '#D9D9D9'}
           />
           <rect
             x="26.8643"
             y="0.362793"
             width="0.765116"
             height="117.828"
-            fill="#D9D9D9"
+            fill={isDark ? '#262626' : '#D9D9D9'}
           />
           <rect
             x="53.3652"
             y="0.362793"
             width="0.765116"
             height="117.828"
-            fill="#D9D9D9"
+            fill={isDark ? '#262626' : '#D9D9D9'}
           />
           <rect
             x="79.8652"
             y="0.362793"
             width="0.765116"
             height="117.828"
-            fill="#D9D9D9"
+            fill={isDark ? '#262626' : '#D9D9D9'}
           />
           <rect
             x="106.366"
             y="0.362793"
             width="0.765116"
             height="117.828"
-            fill="#D9D9D9"
+            fill={isDark ? '#262626' : '#D9D9D9'}
           />
           <rect
             x="132.867"
             y="0.362793"
             width="0.765116"
             height="117.828"
-            fill="#D9D9D9"
+            fill={isDark ? '#262626' : '#D9D9D9'}
           />
           <rect
             x="159.368"
             y="0.362793"
             width="0.765116"
             height="117.828"
-            fill="#D9D9D9"
+            fill={isDark ? '#262626' : '#D9D9D9'}
           />
           <rect
             x="185.868"
             y="0.362793"
             width="0.765116"
             height="117.828"
-            fill="#D9D9D9"
+            fill={isDark ? '#262626' : '#D9D9D9'}
           />
           <rect
             x="212.369"
             y="0.362793"
             width="0.765116"
             height="117.828"
-            fill="#D9D9D9"
+            fill={isDark ? '#262626' : '#D9D9D9'}
           />
           <rect
             x="238.871"
             y="0.362793"
             width="0.765116"
             height="117.828"
-            fill="#D9D9D9"
+            fill={isDark ? '#262626' : '#D9D9D9'}
           />
           <rect
             x="265.371"
             y="0.362793"
             width="0.765116"
             height="117.828"
-            fill="#D9D9D9"
+            fill={isDark ? '#262626' : '#D9D9D9'}
           />
           <g clipPath="url(#clip0_288_298)">
             <mask

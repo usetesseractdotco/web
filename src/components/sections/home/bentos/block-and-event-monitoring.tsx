@@ -9,7 +9,6 @@ export function BlockAndEventMonitoring() {
   >([])
 
   useEffect(() => {
-    // Initial transactions
     setTransactions([
       { id: 1, type: 'Transaction' },
       { id: 2, type: 'Smart Contract' },
@@ -17,7 +16,6 @@ export function BlockAndEventMonitoring() {
       { id: 4, type: 'Smart Contract' },
     ])
 
-    // Set up interval for new transactions
     const interval = setInterval(() => {
       setTransactions((prev) => {
         const newTransactions = [...prev]
@@ -76,7 +74,7 @@ export function BlockAndEventMonitoring() {
                       from
                     </span>
 
-                    <div className="bg-primary w-[90px] p-0.5 md:p-1 text-foreground flex items-center justify-center">
+                    <div className="bg-primary w-[90px] p-0.5 md:p-1 text-primary-foreground flex items-center justify-center">
                       <span className="text-[5px] sm:text-[7px] md:text-[9px] font-mono">
                         {generateRandomAddress()}
                       </span>
@@ -86,7 +84,7 @@ export function BlockAndEventMonitoring() {
                       to
                     </span>
 
-                    <div className="bg-primary w-[90px] p-0.5 md:p-1 text-foreground flex items-center justify-center">
+                    <div className="bg-primary w-[90px] p-0.5 md:p-1 text-primary-foreground flex items-center justify-center">
                       <span className="text-[5px] sm:text-[7px] md:text-[9px] font-mono">
                         {generateRandomAddress()}
                       </span>
@@ -101,7 +99,7 @@ export function BlockAndEventMonitoring() {
                       address
                     </span>
 
-                    <div className="bg-primary w-[90px] p-0.5 md:p-1 text-foreground flex items-center justify-center">
+                    <div className="bg-primary w-[90px] p-0.5 md:p-1 text-primary-foreground flex items-center justify-center">
                       <span className="text-[5px] sm:text-[7px] md:text-[9px] font-mono">
                         {generateRandomAddress()}
                       </span>
@@ -111,7 +109,7 @@ export function BlockAndEventMonitoring() {
                       method
                     </span>
 
-                    <div className="bg-primary w-[90px] p-0.5 md:p-1 text-foreground flex items-center justify-center">
+                    <div className="bg-primary w-[90px] p-0.5 md:p-1 text-primary-foreground flex items-center justify-center">
                       <span className="text-[5px] sm:text-[7px] md:text-[9px] font-mono">
                         {generateRandomFunction()}
                       </span>
@@ -145,16 +143,16 @@ function generateRandomAddress() {
 
 function generateRandomFunction() {
   const functions = [
-    'Transfer',
-    'Mint',
-    'Approve',
-    'Stake',
-    'Swap',
-    'Claim',
-    'Vote',
-    'Deploy',
-    'Execute',
-    'Withdraw',
+    'transfer()',
+    'mint()',
+    'approve()',
+    'stake()',
+    'swap()',
+    'claim()',
+    'vote()',
+    'deploy()',
+    'execute()',
+    'withdraw()',
   ]
   return functions[Math.floor(Math.random() * functions.length)]
 }

@@ -1,3 +1,4 @@
+import { MailIcon } from 'lucide-react'
 import { motion } from 'motion/react'
 import { useMediaQuery } from 'usehooks-ts'
 
@@ -6,7 +7,7 @@ import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
 
 export function Hero() {
-  const isSmallScreen = useMediaQuery('(min-width: 640px)')
+  const isMediumScreen = useMediaQuery('(min-width: 640px)')
 
   return (
     <section className="flex flex-col gap-6 items-center justify-center">
@@ -55,15 +56,29 @@ export function Hero() {
             delay: 0.2,
           }}
           className={cn('flex gap-2', {
-            'flex-col': !isSmallScreen,
-            'min-w-lg': isSmallScreen,
+            'flex-col': !isMediumScreen,
+            'min-w-lg': isMediumScreen,
           })}
           viewport={{ once: true }}
         >
-          {isSmallScreen && (
-            <Input className="flex-1 w-full" placeholder="Enter your email" />
+          {isMediumScreen && (
+            <div className="flex-1 items-center justify-center flex-row flex gap-2">
+              <MailIcon className="size-4 text-muted-foreground absolute left-3" />
+
+              <Input
+                className={cn(
+                  'flex-1 w-full h-13 placeholder:text-muted-foreground text-muted-foreground pl-10',
+                  {
+                    'h-10': !isMediumScreen,
+                  },
+                )}
+                placeholder="Enter your email"
+              />
+            </div>
           )}
-          <Button size={isSmallScreen ? 'default' : 'sm'}>Join Waitlist</Button>
+          <Button size={isMediumScreen ? 'lg' : 'default'}>
+            Join Waitlist
+          </Button>
         </motion.div>
       </div>
 

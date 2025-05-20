@@ -28,7 +28,7 @@ export function Header() {
           className="invert dark:invert-0"
         />
 
-        <Button size={isDesktop ? 'default' : 'sm'}>Join Waitlist</Button>
+        <Button size={isDesktop ? 'lg' : 'default'}>Join Waitlist</Button>
       </div>
     </header>
   )

@@ -7,7 +7,7 @@ import { ClipPathButton } from '@/components/ui/clip-path-button'
 
 export function SmartContractIntegration() {
   return (
-    <div className="flex flex-col w-full h-[18em] items-start justify-between border-b border-l border-r sm:border-t p-4">
+    <div className="flex flex-col w-full h-[18em] items-start justify-between border-b border-l sm:border-t p-4">
       <div
         className="relative w-full h-full bg-cover bg-center flex flex-col items-center justify-center overflow-hidden"
         style={{

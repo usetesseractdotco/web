@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'motion/react'
 import { useState } from 'react'
 
 import { cn } from '@/lib/utils'
@@ -10,8 +11,16 @@ export function FeaturesWithPreview() {
   >('multi-chain-support')
 
   return (
-    <section className="flex flex-col md:flex-row pt-32 gap-10">
-      <div className="flex flex-col w-full gap-8 md:text-start justify-center">
+    <section className="flex flex-col lg:flex-row pt-32 gap-10 px-8">
+      <motion.div
+        whileInView={{
+          opacity: [0, 1],
+          y: [20, 0],
+        }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        viewport={{ once: true }}
+        className="flex flex-col w-full gap-8 md:text-start justify-center"
+      >
         <div className="flex flex-col gap-6 items-center justify-center md:text-start md:items-start text-center">
           <h1 className="font-medium text-4xl tracking-[-0.2] max-w-xs md:text-5xl md:max-w-3xl">
             Everything you need, included
@@ -92,14 +101,22 @@ export function FeaturesWithPreview() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="relative min-w-[280px] sm:min-w-lg mx-auto w-full h-[13em] sm:h-[24em] lg:h-[26.25em] lg:min-w-xl md:translate-y-1/2 lg:translate-y-0 md:translate-x-1/3 border mt-10 -z-10">
+      <motion.div
+        whileInView={{
+          opacity: [0, 1],
+          y: [20, 0],
+        }}
+        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+        viewport={{ once: true }}
+        className="relative min-w-[280px] sm:min-w-lg mx-auto w-full h-[13em] sm:h-[24em] lg:h-[26.25em] lg:min-w-xl lg:translate-y-0 border mt-10 -z-10"
+      >
         <div className="absolute size-[2.5em] sm:size-[4.25em] lg:size-[6.25em] -left-[2.5em] sm:left-[-4.2em] lg:left-[-6.24em] -top-[2.5em] sm:top-[-4.2em] lg:top-[-6.24em] border-b border-r bg-transparent" />
         <div className="absolute size-[2.5em] sm:size-[4.25em] lg:size-[6.25em] -right-[2.5em] sm:right-[-4.2em] lg:right-[-6.24em] -top-[2.5em] sm:top-[-4.2em] lg:top-[-6.24em] border-b border-l bg-transparent" />
         <div className="absolute size-[2.5em] sm:size-[4.25em] lg:size-[6.25em] -left-[2.5em] sm:left-[-4.2em] lg:left-[-6.24em] -bottom-[2.5em] sm:bottom-[-4.2em] lg:bottom-[-6.24em] border-t border-r bg-transparent" />
         <div className="absolute size-[2.5em] sm:size-[4.25em] lg:size-[6.25em] -right-[2.5em] sm:right-[-4.2em] lg:right-[-6.24em] -bottom-[2.5em] sm:bottom-[-4.2em] lg:bottom-[-6.24em] border-t border-l bg-transparent" />
-      </div>
+      </motion.div>
     </section>
   )
 }

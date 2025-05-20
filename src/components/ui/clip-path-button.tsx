@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'motion/react'
+import { useState } from 'react'
 
 import { cn } from '@/lib/utils'
 
@@ -13,15 +14,21 @@ export function ClipPathButton({
   initialDelay = 0,
   ...props
 }: ClipPathButtonProps) {
+  const [isAnimationEnded, setIsAnimationEnded] = useState<boolean>(false)
+
   return (
     <div
       {...props}
       className={cn(
         'group z-[999] font-mono relative h-12 flex items-center justify-center gap-2 px-3.5 select-none',
         'border bg-muted text-[#686868]',
+        {
+          'border-[#6999FF]': isAnimationEnded,
+        },
       )}
     >
       <motion.div
+        onAnimationComplete={() => setIsAnimationEnded(true)}
         aria-hidden="true"
         className={cn(
           'absolute bg-primary inset-0 flex items-center justify-center gap-2 text-white',

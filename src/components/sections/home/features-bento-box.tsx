@@ -184,7 +184,6 @@ export function FeaturesBentoBox() {
                   key={i}
                   whileInView={{
                     opacity: [0, 1],
-                    y: [-20 * -i, 0],
                     filter: ['blur(4px)', 'blur(0px)'],
                   }}
                   transition={{
@@ -194,31 +193,11 @@ export function FeaturesBentoBox() {
                   viewport={{ once: true }}
                   className="flex flex-row items-center h-[2em] justify-between w-full border-b"
                 >
-                  <motion.span
-                    whileInView={{
-                      x: [-40, 0],
-                    }}
-                    transition={{
-                      duration: 0.3,
-                      delay: 0.05 * i,
-                    }}
-                    viewport={{ once: true }}
-                    className="text-muted-foreground text-[6px] sm:text-[8px] md:text-[10px]"
-                  >
+                  <span className="text-muted-foreground text-[6px] sm:text-[8px] md:text-[10px]">
                     Transaction
-                  </motion.span>
+                  </span>
 
-                  <motion.div
-                    whileInView={{
-                      x: [40, 0],
-                    }}
-                    transition={{
-                      duration: 0.3,
-                      delay: 0.05 * i,
-                    }}
-                    viewport={{ once: true }}
-                    className="flex flex-row gap-1 items-center justify-center"
-                  >
+                  <div className="flex flex-row gap-1 items-center justify-center">
                     <span className="text-muted-foreground text-[5px] sm:text-[7px] md:text-[9px]">
                       from
                     </span>
@@ -238,7 +217,7 @@ export function FeaturesBentoBox() {
                         6iAV...zouG
                       </span>
                     </div>
-                  </motion.div>
+                  </div>
                 </motion.div>
               ))}
             </div>

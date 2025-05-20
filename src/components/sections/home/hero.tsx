@@ -10,38 +10,62 @@ export function Hero() {
 
   return (
     <section className="flex flex-col gap-6 items-center justify-center">
-      <motion.div
-        whileInView={{
-          opacity: [0, 1],
-          y: [20, 0],
-          filter: ['blur(10px)', 'blur(0px)'],
-        }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-        viewport={{ once: true }}
-        className="flex flex-col gap-7 items-center justify-center w-full"
-      >
+      <div className="flex flex-col gap-7 items-center justify-center w-full">
         <div className="flex flex-col gap-6 items-center justify-center text-center">
-          <h1 className="font-medium text-4xl sm:text-7xl leading-[1.1] tracking-[-0.4] max-w-xs sm:max-w-3xl">
+          <motion.h1
+            whileInView={{
+              opacity: [0, 1],
+              y: [20, 0],
+              filter: ['blur(10px)', 'blur(0px)'],
+            }}
+            transition={{ duration: 0.44, ease: [0.165, 0.84, 0.44, 1] }}
+            viewport={{ once: true }}
+            className="font-medium text-4xl sm:text-7xl leading-[1.1] tracking-[-0.4] max-w-xs sm:max-w-3xl"
+          >
             Simplified Backend for Blockchain Apps
-          </h1>
-          <p className="text-base text-muted-foreground max-w-xs sm:max-w-md">
+          </motion.h1>
+          <motion.p
+            whileInView={{
+              opacity: [0, 1],
+              y: [20, 0],
+              filter: ['blur(10px)', 'blur(0px)'],
+            }}
+            transition={{
+              duration: 0.44,
+              ease: [0.165, 0.84, 0.44, 1],
+              delay: 0.1,
+            }}
+            viewport={{ once: true }}
+            className="text-base text-muted-foreground max-w-xs sm:max-w-md"
+          >
             Tesseract is an open-source, self-hostable platform that removes the
             complexity of blockchain infrastructure.
-          </p>
+          </motion.p>
         </div>
 
-        <div
+        <motion.div
+          whileInView={{
+            opacity: [0, 1],
+            y: [20, 0],
+            filter: ['blur(10px)', 'blur(0px)'],
+          }}
+          transition={{
+            duration: 0.44,
+            ease: [0.165, 0.84, 0.44, 1],
+            delay: 0.2,
+          }}
           className={cn('flex gap-2', {
             'flex-col': !isSmallScreen,
             'min-w-lg': isSmallScreen,
           })}
+          viewport={{ once: true }}
         >
           {isSmallScreen && (
             <Input className="flex-1 w-full" placeholder="Enter your email" />
           )}
           <Button size={isSmallScreen ? 'default' : 'sm'}>Join Waitlist</Button>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
 
       <motion.div
         whileInView={{
@@ -49,14 +73,18 @@ export function Hero() {
           y: [20, 0],
           filter: ['blur(10px)', 'blur(0px)'],
         }}
-        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+        transition={{
+          duration: 0.44,
+          ease: [0.165, 0.84, 0.44, 1],
+          delay: 0.3,
+        }}
         viewport={{ once: true }}
         className="relative max-w-[280px] sm:max-w-xl mx-auto w-full h-[13em] sm:h-[24em] lg:h-[26.25em] lg:max-w-4xl border mt-10 -z-10"
       >
-        <div className="absolute h-full w-[1.5em] -left-[1.5em] rotate-180 overflow-hidden border-r bg-transparent bg-[linear-gradient(-45deg,rgba(0,0,0,0.01)_40%,rgba(0,0,0,0.15)_40%,rgba(0,0,0,0.15)_45%,rgba(0,0,0,0.01)_45%,rgba(0,0,0,0.01)_90%,rgba(0,0,0,0.15)_90%,rgba(0,0,0,0.01)_95%)] bg-[size:15px_15px]" />
-        <div className="absolute h-full w-[1.5em] -right-[1.5em] overflow-hidden border-r bg-transparent bg-[linear-gradient(-45deg,rgba(0,0,0,0.01)_40%,rgba(0,0,0,0.15)_40%,rgba(0,0,0,0.15)_45%,rgba(0,0,0,0.01)_45%,rgba(0,0,0,0.01)_90%,rgba(0,0,0,0.15)_90%,rgba(0,0,0,0.01)_95%)] bg-[size:15px_15px]" />
-        <div className="absolute h-[17.4em] sm:h-[35.8em] lg:h-[48em] w-[1.25em] left-[8.1em] sm:left-[17.3em] lg:left-[23.3em] bottom-[4.9em] sm:bottom-[6.6em] lg:bottom-[2.8em]  rotate-90 overflow-hidden border-l bg-transparent bg-[linear-gradient(-45deg,rgba(0,0,0,0.01)_40%,rgba(0,0,0,0.15)_40%,rgba(0,0,0,0.15)_45%,rgba(0,0,0,0.01)_45%,rgba(0,0,0,0.01)_90%,rgba(0,0,0,0.15)_90%,rgba(0,0,0,0.01)_95%)] bg-[size:15px_15px]" />
-        <div className="absolute h-[17.4em] sm:h-[35.8em] lg:h-[48em] w-[1.25em] left-[8.1em] sm:left-[17.3em] lg:left-[23.3em] top-[4.9em] sm:top-[6.6em] lg:top-[2.8em] rotate-90 overflow-hidden border-r bg-transparent bg-[linear-gradient(-45deg,rgba(0,0,0,0.01)_40%,rgba(0,0,0,0.15)_40%,rgba(0,0,0,0.15)_45%,rgba(0,0,0,0.01)_45%,rgba(0,0,0,0.01)_90%,rgba(0,0,0,0.15)_90%,rgba(0,0,0,0.01)_95%)] bg-[size:15px_15px]" />
+        <div className="absolute h-full w-[1.5em] -left-[1.5em] rotate-180 overflow-hidden border-r bg-transparent bg-[linear-gradient(-45deg,rgba(0,0,0,0.01)_40%,rgba(0,0,0,0.15)_40%,rgba(0,0,0,0.15)_45%,rgba(0,0,0,0.01)_45%,rgba(0,0,0,0.01)_90%,rgba(0,0,0,0.15)_90%,rgba(0,0,0,0.01)_95%)] dark:bg-[linear-gradient(-45deg,rgba(255,255,255,0.01)_40%,rgba(255,255,255,0.15)_40%,rgba(255,255,255,0.15)_45%,rgba(255,255,255,0.01)_45%,rgba(255,255,255,0.01)_90%,rgba(255,255,255,0.15)_90%,rgba(255,255,255,0.01)_95%)] bg-[size:15px_15px]" />
+        <div className="absolute h-full w-[1.5em] -right-[1.5em] overflow-hidden border-r bg-transparent bg-[linear-gradient(-45deg,rgba(0,0,0,0.01)_40%,rgba(0,0,0,0.15)_40%,rgba(0,0,0,0.15)_45%,rgba(0,0,0,0.01)_45%,rgba(0,0,0,0.01)_90%,rgba(0,0,0,0.15)_90%,rgba(0,0,0,0.01)_95%)] dark:bg-[linear-gradient(-45deg,rgba(255,255,255,0.01)_40%,rgba(255,255,255,0.15)_40%,rgba(255,255,255,0.15)_45%,rgba(255,255,255,0.01)_45%,rgba(255,255,255,0.01)_90%,rgba(255,255,255,0.15)_90%,rgba(255,255,255,0.01)_95%)] bg-[size:15px_15px]" />
+        <div className="absolute h-[17.4em] sm:h-[35.8em] lg:h-[48em] w-[1.25em] left-[8.1em] sm:left-[17.3em] lg:left-[23.3em] bottom-[4.9em] sm:bottom-[6.6em] lg:bottom-[2.8em]  rotate-90 overflow-hidden border-l bg-transparent bg-[linear-gradient(-45deg,rgba(0,0,0,0.01)_40%,rgba(0,0,0,0.15)_40%,rgba(0,0,0,0.15)_45%,rgba(0,0,0,0.01)_45%,rgba(0,0,0,0.01)_90%,rgba(0,0,0,0.15)_90%,rgba(0,0,0,0.01)_95%)] dark:bg-[linear-gradient(-45deg,rgba(255,255,255,0.01)_40%,rgba(255,255,255,0.15)_40%,rgba(255,255,255,0.15)_45%,rgba(255,255,255,0.01)_45%,rgba(255,255,255,0.01)_90%,rgba(255,255,255,0.15)_90%,rgba(255,255,255,0.01)_95%)] bg-[size:15px_15px]" />
+        <div className="absolute h-[17.4em] sm:h-[35.8em] lg:h-[48em] w-[1.25em] left-[8.1em] sm:left-[17.3em] lg:left-[23.3em] top-[4.9em] sm:top-[6.6em] lg:top-[2.8em] rotate-90 overflow-hidden border-r bg-transparent bg-[linear-gradient(-45deg,rgba(0,0,0,0.01)_40%,rgba(0,0,0,0.15)_40%,rgba(0,0,0,0.15)_45%,rgba(0,0,0,0.01)_45%,rgba(0,0,0,0.01)_90%,rgba(0,0,0,0.15)_90%,rgba(0,0,0,0.01)_95%)] dark:bg-[linear-gradient(-45deg,rgba(255,255,255,0.01)_40%,rgba(255,255,255,0.15)_40%,rgba(255,255,255,0.15)_45%,rgba(255,255,255,0.01)_45%,rgba(255,255,255,0.01)_90%,rgba(255,255,255,0.15)_90%,rgba(255,255,255,0.01)_95%)] bg-[size:15px_15px]" />
 
         <div className="absolute size-[2.5em] sm:size-[4.25em] lg:size-[6.25em] -left-[2.5em] sm:left-[-4.2em] lg:left-[-6.2em] -top-[2.5em] sm:top-[-4.2em] lg:top-[-6.2em] border-b border-r bg-transparent" />
         <div className="absolute size-[2.5em] sm:size-[4.25em] lg:size-[6.25em] -right-[2.5em] sm:right-[-4.2em] lg:right-[-6.2em] -top-[2.5em] sm:top-[-4.2em] lg:top-[-6.2em] border-b border-l bg-transparent" />

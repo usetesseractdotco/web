@@ -21,9 +21,9 @@ export function ClipPathButton({
       {...props}
       className={cn(
         'group z-[999] font-mono relative h-12 flex items-center justify-center gap-2 px-3.5 select-none',
-        'border bg-muted text-[#686868]',
+        'border bg-muted text-muted-foreground',
         {
-          'border-[#6999FF]': isAnimationEnded,
+          'border-accent': isAnimationEnded,
         },
       )}
     >
@@ -31,7 +31,7 @@ export function ClipPathButton({
         onAnimationComplete={() => setIsAnimationEnded(true)}
         aria-hidden="true"
         className={cn(
-          'absolute bg-primary inset-0 flex items-center justify-center gap-2 text-white',
+          'absolute bg-primary inset-0 flex items-center justify-center gap-2 text-foreground',
         )}
         initial={{
           clipPath: 'inset(0px 100% 0px 0px)',
@@ -41,7 +41,7 @@ export function ClipPathButton({
         }}
         transition={{
           duration: 1.5,
-          ease: 'linear',
+          ease: [0.55, 0.055, 0.675, 0.19],
           delay: initialDelay,
         }}
         viewport={{ once: true }}

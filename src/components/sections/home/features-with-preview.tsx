@@ -110,7 +110,7 @@ export function FeaturesWithPreview() {
         }}
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
         viewport={{ once: true }}
-        className="relative min-w-[280px] sm:min-w-lg mx-auto w-full h-[13em] sm:h-[24em] lg:h-[26.25em] lg:min-w-xl lg:translate-y-0 border mt-10 -z-10"
+        className="relative min-w-[280px] sm:min-w-lg mx-auto w-full h-[13em] sm:h-[24em] lg:h-[26.25em] lg:min-w-xl lg:translate-y-0 lg:translate-x-1/3 border mt-10 -z-10"
       >
         <div className="absolute size-[2.5em] sm:size-[4.25em] lg:size-[6.25em] -left-[2.5em] sm:left-[-4.2em] lg:left-[-6.24em] -top-[2.5em] sm:top-[-4.2em] lg:top-[-6.24em] border-b border-r bg-transparent" />
         <div className="absolute size-[2.5em] sm:size-[4.25em] lg:size-[6.25em] -right-[2.5em] sm:right-[-4.2em] lg:right-[-6.24em] -top-[2.5em] sm:top-[-4.2em] lg:top-[-6.24em] border-b border-l bg-transparent" />

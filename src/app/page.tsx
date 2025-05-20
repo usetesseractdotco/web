@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 
 import { FeaturesBentoBox } from '@/components/sections/home/features-bento-box'
-import { FeautresWithPreview } from '@/components/sections/home/features-with-preview'
+import { FeaturesWithPreview } from '@/components/sections/home/features-with-preview'
 import { Hero } from '@/components/sections/home/hero'
 
 export default function Home() {
@@ -18,10 +18,8 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center py-20 overflow-x-hidden">
       <Hero />
-
       <FeaturesBentoBox />
-
-      <FeautresWithPreview />
+      <FeaturesWithPreview />
     </main>
   )
 }

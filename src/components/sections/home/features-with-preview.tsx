@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 import { cn } from '@/lib/utils'
 
-export function FeautresWithPreview() {
+export function FeaturesWithPreview() {
   const [activeSection, setActiveSection] = useState<
     'multi-chain-support' | 'flexible-auth' | 'api-management' | 'tx-simulation'
   >('multi-chain-support')

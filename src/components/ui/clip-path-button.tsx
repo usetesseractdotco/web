@@ -1,12 +1,12 @@
-"use client";
+'use client'
 
-import { motion } from "motion/react";
+import { motion } from 'motion/react'
 
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
 
 type ClipPathButtonProps = {
-  initialDelay?: number;
-} & React.ComponentProps<"div">;
+  initialDelay?: number
+} & React.ComponentProps<'div'>
 
 export function ClipPathButton({
   children,
@@ -17,24 +17,24 @@ export function ClipPathButton({
     <div
       {...props}
       className={cn(
-        "group z-[999] font-mono relative h-12 flex items-center justify-center gap-2 px-3.5 select-none",
-        "border bg-muted text-[#686868]"
+        'group z-[999] font-mono relative h-12 flex items-center justify-center gap-2 px-3.5 select-none',
+        'border bg-muted text-[#686868]',
       )}
     >
       <motion.div
         aria-hidden="true"
         className={cn(
-          "absolute bg-primary inset-0 flex items-center justify-center gap-2 text-white"
+          'absolute bg-primary inset-0 flex items-center justify-center gap-2 text-white',
         )}
         initial={{
-          clipPath: "inset(0px 100% 0px 0px)",
+          clipPath: 'inset(0px 100% 0px 0px)',
         }}
         whileInView={{
-          clipPath: "inset(0px 0px 0px 0px)",
+          clipPath: 'inset(0px 0px 0px 0px)',
         }}
         transition={{
           duration: 1.5,
-          ease: "linear",
+          ease: 'linear',
           delay: initialDelay,
         }}
         viewport={{ once: true }}
@@ -43,5 +43,5 @@ export function ClipPathButton({
       </motion.div>
       {children}
     </div>
-  );
+  )
 }

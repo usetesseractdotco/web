@@ -1,8 +1,8 @@
-"use client";
+'use client'
 
-import { motion } from "motion/react";
+import { motion } from 'motion/react'
 
-import { ClipPathButton } from "@/components/ui/clip-path-button";
+import { ClipPathButton } from '@/components/ui/clip-path-button'
 
 export function FeaturesBentoBox() {
   return (
@@ -53,7 +53,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip0_267_135)">
                   <mask
                     id="mask0_267_135"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="10"
                     y="7"
@@ -74,7 +74,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip1_267_135)">
                   <mask
                     id="mask1_267_135"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="253"
                     y="7"
@@ -95,7 +95,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip2_267_135)">
                   <mask
                     id="mask2_267_135"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="149"
                     y="38"
@@ -116,7 +116,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip3_267_135)">
                   <mask
                     id="mask3_267_135"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="322"
                     y="38"
@@ -137,7 +137,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip4_267_135)">
                   <mask
                     id="mask4_267_135"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="45"
                     y="69"
@@ -158,7 +158,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip5_267_135)">
                   <mask
                     id="mask5_267_135"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="115"
                     y="99"
@@ -179,7 +179,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip6_267_135)">
                   <mask
                     id="mask6_267_135"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="218"
                     y="99"
@@ -200,7 +200,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip7_267_135)">
                   <mask
                     id="mask7_267_135"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="357"
                     y="130"
@@ -448,7 +448,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip0_288_298)">
                   <mask
                     id="mask0_288_298"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="7"
                     y="5"
@@ -472,7 +472,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip1_288_298)">
                   <mask
                     id="mask1_288_298"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="193"
                     y="5"
@@ -496,7 +496,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip2_288_298)">
                   <mask
                     id="mask2_288_298"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="113"
                     y="29"
@@ -520,7 +520,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip3_288_298)">
                   <mask
                     id="mask3_288_298"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="246"
                     y="29"
@@ -544,7 +544,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip4_288_298)">
                   <mask
                     id="mask4_288_298"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="34"
                     y="53"
@@ -568,7 +568,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip5_288_298)">
                   <mask
                     id="mask5_288_298"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="87"
                     y="76"
@@ -592,7 +592,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip6_288_298)">
                   <mask
                     id="mask6_288_298"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="166"
                     y="76"
@@ -616,7 +616,7 @@ export function FeaturesBentoBox() {
                 <g clipPath="url(#clip7_288_298)">
                   <mask
                     id="mask7_288_298"
-                    style={{ maskType: "luminance" }}
+                    style={{ maskType: 'luminance' }}
                     maskUnits="userSpaceOnUse"
                     x="273"
                     y="99"
@@ -790,7 +790,7 @@ export function FeaturesBentoBox() {
             <div
               className="relative w-full h-full bg-cover bg-center flex flex-col items-center justify-center overflow-hidden"
               style={{
-                backgroundImage: "url(/smart-contract-bg.png)",
+                backgroundImage: 'url(/smart-contract-bg.png)',
               }}
             >
               {/*               
@@ -809,15 +809,15 @@ export function FeaturesBentoBox() {
             */}
 
               <motion.div
-                initial={{ filter: "blur(4px)", opacity: 0, y: -20 }}
+                initial={{ filter: 'blur(4px)', opacity: 0, y: -20 }}
                 whileInView={{
-                  filter: "blur(0px)",
+                  filter: 'blur(0px)',
                   opacity: 1,
                   y: 0,
                 }}
                 transition={{
                   duration: 0.5,
-                  ease: "easeOut",
+                  ease: 'easeOut',
                 }}
                 viewport={{
                   once: true,
@@ -846,13 +846,13 @@ export function FeaturesBentoBox() {
                 className="w-px h-5 bg-border"
                 initial={{ height: 0 }}
                 animate={{ height: 20 }}
-                transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
+                transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
                 viewport={{ once: true }}
               />
 
               <motion.div
                 whileInView={{
-                  filter: ["blur(4px)", "blur(0px)"],
+                  filter: ['blur(4px)', 'blur(0px)'],
                   opacity: [0, 1],
                   y: [-20, 0],
                   scale: [0.9, 1],
@@ -860,16 +860,16 @@ export function FeaturesBentoBox() {
                 transition={{
                   delay: 0.5,
                   duration: 0.5,
-                  ease: "easeOut",
+                  ease: 'easeOut',
                   scale: {
                     delay: 1.1,
                     duration: 0.5,
-                    ease: "easeOut",
+                    ease: 'easeOut',
                   },
                   color: {
                     delay: 1.1,
                     duration: 1.2,
-                    ease: "easeOut",
+                    ease: 'easeOut',
                   },
                 }}
                 viewport={{
@@ -886,20 +886,20 @@ export function FeaturesBentoBox() {
                 className="w-px h-5 bg-border"
                 initial={{ height: 0 }}
                 whileInView={{ height: 20 }}
-                transition={{ duration: 0.7, ease: "easeOut", delay: 2.7 }}
+                transition={{ duration: 0.7, ease: 'easeOut', delay: 2.7 }}
                 viewport={{ once: true }}
               />
 
               <motion.div
                 className="flex flex-row gap-2.5 pl-3 pr-3.5 items-center justify-center bg-muted text-[#686868] py-2 border"
-                initial={{ filter: "blur(4px)", opacity: 0 }}
+                initial={{ filter: 'blur(4px)', opacity: 0 }}
                 whileInView={{
-                  filter: "blur(0px)",
+                  filter: 'blur(0px)',
                   opacity: 1,
                 }}
                 transition={{
                   duration: 0.5,
-                  ease: "easeOut",
+                  ease: 'easeOut',
                   delay: 2.9,
                 }}
                 viewport={{
@@ -1303,5 +1303,5 @@ export function FeaturesBentoBox() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,11 +1,11 @@
-import { useMediaQuery } from "usehooks-ts";
+import { useMediaQuery } from 'usehooks-ts'
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { cn } from '@/lib/utils'
 
 export function Hero() {
-  const isSmallScreen = useMediaQuery("(min-width: 640px)");
+  const isSmallScreen = useMediaQuery('(min-width: 640px)')
 
   return (
     <section className="flex flex-col gap-6 items-center justify-center">
@@ -21,15 +21,15 @@ export function Hero() {
         </div>
 
         <div
-          className={cn("flex gap-2", {
-            "flex-col": !isSmallScreen,
-            "min-w-lg": isSmallScreen,
+          className={cn('flex gap-2', {
+            'flex-col': !isSmallScreen,
+            'min-w-lg': isSmallScreen,
           })}
         >
           {isSmallScreen && (
             <Input className="flex-1 w-full" placeholder="Enter your email" />
           )}
-          <Button size={isSmallScreen ? "default" : "sm"}>Join Waitlist</Button>
+          <Button size={isSmallScreen ? 'default' : 'sm'}>Join Waitlist</Button>
         </div>
       </div>
 
@@ -45,5 +45,5 @@ export function Hero() {
         <div className="absolute size-[2.5em] sm:size-[4.25em] lg:size-[6.25em] -right-[2.5em] sm:right-[-4.2em] lg:right-[-6.2em] -bottom-[2.5em] sm:bottom-[-4.2em] lg:bottom-[-6.2em] border-t border-l bg-transparent" />
       </div>
     </section>
-  );
+  )
 }

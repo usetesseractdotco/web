@@ -19,15 +19,17 @@ export function Header() {
 
   return (
     <header className="sticky top-0 items-center justify-between flex w-full mx-auto px-8 py-6 bg-background/10 backdrop-blur-sm border-b border-border/10">
-      <Image
-        src="/logo.svg"
-        alt="logo"
-        width={48}
-        height={56}
-        className="invert dark:invert-0"
-      />
+      <div className="mx-auto max-w-6xl flex items-center justify-between w-full">
+        <Image
+          src="/logo.svg"
+          alt="logo"
+          width={48}
+          height={56}
+          className="invert dark:invert-0"
+        />
 
-      <Button size={isDesktop ? 'default' : 'sm'}>Join Waitlist</Button>
+        <Button size={isDesktop ? 'default' : 'sm'}>Join Waitlist</Button>
+      </div>
     </header>
   )
 }

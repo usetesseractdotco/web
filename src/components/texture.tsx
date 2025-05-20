@@ -19,7 +19,7 @@ export function Texture() {
       src={`/${resolvedTheme}-dots.png`}
       alt="Texture"
       fill
-      className="object-cover opacity-50"
+      className="object-cover opacity-50 -z-10"
       priority
     />
   )

@@ -37,7 +37,7 @@ export function BlockAndEventMonitoring() {
   }, [])
 
   return (
-    <div className="flex flex-col w-full h-[13.75em] border-b border-l sm:border-r-0 border-r p-4">
+    <div className="flex flex-col w-full h-[18em] border-b border-l sm:border-r-0 border-r p-4">
       <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden select-none">
         <LayoutGroup>
           <AnimatePresence mode="popLayout">

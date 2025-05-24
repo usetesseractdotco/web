@@ -1,13 +1,17 @@
 import { MailIcon } from 'lucide-react'
 import { motion } from 'motion/react'
+import { useState } from 'react'
 import { useMediaQuery } from 'usehooks-ts'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import { TextScramble } from '@/components/ui/text-scramble'
 import { cn } from '@/lib/utils'
 
 export function Hero() {
   const isMediumScreen = useMediaQuery('(min-width: 640px)')
+
+  const [isTrigger, setIsTrigger] = useState(false)
 
   return (
     <section className="flex flex-col gap-6 items-center justify-center">
@@ -67,7 +71,7 @@ export function Hero() {
 
               <Input
                 className={cn(
-                  'flex-1 w-full h-13 placeholder:text-muted-foreground text-muted-foreground pl-10',
+                  'flex-1 w-full h-10 placeholder:text-muted-foreground text-muted-foreground pl-10',
                   {
                     'h-10': !isMediumScreen,
                   },
@@ -76,8 +80,20 @@ export function Hero() {
               />
             </div>
           )}
-          <Button size={isMediumScreen ? 'lg' : 'default'}>
-            Join Waitlist
+          <Button
+            size={'default'}
+            onMouseEnter={() => setIsTrigger(true)}
+            onMouseLeave={() => setIsTrigger(false)}
+          >
+            <TextScramble
+              as="span"
+              speed={0.03}
+              trigger={isTrigger}
+              className="text-sm"
+              onScrambleComplete={() => setIsTrigger(false)}
+            >
+              Join Waitlist
+            </TextScramble>
           </Button>
         </motion.div>
       </div>

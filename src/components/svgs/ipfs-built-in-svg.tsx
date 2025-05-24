@@ -1,8 +1,24 @@
+import { motion } from 'motion/react'
 import { useTheme } from 'next-themes'
 
 export function IPFSBuiltInSVG() {
   const { resolvedTheme } = useTheme()
   const isDark = resolvedTheme === 'dark'
+
+  const paths = [
+    { d: 'M36 17H53V61' },
+    { d: 'M53 93V109H104' },
+    { d: 'M140 109H207' },
+    { d: 'M138 47H122V92' },
+    { d: 'M62 17H122V47' },
+    { d: 'M242 15H226V92' },
+    { d: 'M226 52V47H175' },
+    { d: 'M348 46H365V122' },
+    { d: 'M346 139H226V124' },
+    { d: 'M70 77H122V92' },
+    { d: 'M244 109H330V62' },
+    { d: 'M279 15H330V30' },
+  ]
 
   return (
     <>
@@ -266,18 +282,29 @@ export function IPFSBuiltInSVG() {
               />
             </g>
           </g>
-          <path d="M36 17H53V61" stroke="#0052FF" strokeDasharray="6 6" />
-          <path d="M53 93V109H104" stroke="#0052FF" strokeDasharray="6 6" />
-          <path d="M140 109H207" stroke="#0052FF" strokeDasharray="6 6" />
-          <path d="M138 47H122V92" stroke="#0052FF" strokeDasharray="6 6" />
-          <path d="M62 17H122V47" stroke="#0052FF" strokeDasharray="6 6" />
-          <path d="M242 15H226V92" stroke="#0052FF" strokeDasharray="6 6" />
-          <path d="M226 52V47H175" stroke="#0052FF" strokeDasharray="6 6" />
-          <path d="M348 46H365V122" stroke="#0052FF" strokeDasharray="6 6" />
-          <path d="M346 139H226V124" stroke="#0052FF" strokeDasharray="6 6" />
-          <path d="M70 77H122V92" stroke="#0052FF" strokeDasharray="6 6" />
-          <path d="M244 109H330V62" stroke="#0052FF" strokeDasharray="6 6" />
-          <path d="M279 15H330V30" stroke="#0052FF" strokeDasharray="6 6" />
+          {paths.map((path, i) => (
+            <motion.path
+              initial={{
+                pathLength: 0,
+              }}
+              whileInView={{
+                pathLength: 1,
+              }}
+              transition={{
+                duration: 1.2,
+                repeat: Infinity,
+                repeatDelay: 2,
+                repeatEnd: 0.5,
+                repeatStart: 0.5,
+                repeatSpeed: 1,
+              }}
+              key={i}
+              d={path.d}
+              stroke="#0052FF"
+              strokeDasharray="6 6"
+            />
+          ))}
+
           <defs>
             <clipPath id="clip0_267_135">
               <rect

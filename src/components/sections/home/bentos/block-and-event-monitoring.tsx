@@ -56,7 +56,7 @@ export function BlockAndEventMonitoring() {
                     ease: [0.165, 0.84, 0.44, 1],
                   },
                 }}
-                className="flex flex-row items-center h-[2em] justify-between w-full border-b"
+                className="flex flex-row items-center h-[2em] justify-between w-full last:border-b-0 border-b"
               >
                 <motion.span
                   layout

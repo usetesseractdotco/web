@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
+import { CodeExample } from '@/components/sections/home/code-example'
 import { FeaturesBentoBox } from '@/components/sections/home/features-bento-box'
 import { FeaturesWithPreview } from '@/components/sections/home/features-with-preview'
 import { Hero } from '@/components/sections/home/hero'
@@ -20,6 +21,7 @@ export default function Home() {
       <Hero />
       <FeaturesBentoBox />
       <FeaturesWithPreview />
+      <CodeExample />
     </main>
   )
 }

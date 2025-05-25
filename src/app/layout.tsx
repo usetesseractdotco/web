@@ -40,6 +40,7 @@ export default function RootLayout({
         >
           <Texture />
           <Header />
+
           {children}
         </ThemeProvider>
       </body>

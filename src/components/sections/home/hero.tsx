@@ -14,7 +14,7 @@ export function Hero() {
   const [isTrigger, setIsTrigger] = useState(false)
 
   return (
-    <section className="flex flex-col gap-6 items-center justify-center">
+    <section className="flex flex-col gap-6 items-center justify-center z-10">
       <div className="flex flex-col gap-7 items-center justify-center w-full">
         <div className="flex flex-col gap-6 items-center justify-center text-center">
           <motion.h1

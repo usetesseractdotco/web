@@ -9,7 +9,7 @@ import { SmartContractIntegration } from './bentos/smart-contract-integration'
 
 export function FeaturesBentoBox() {
   return (
-    <section className="flex flex-col gap-16 items-center justify-center pt-32">
+    <section className="flex flex-col gap-16 items-center justify-center pt-32 z-10">
       <motion.div
         whileInView={{
           opacity: [0, 1],

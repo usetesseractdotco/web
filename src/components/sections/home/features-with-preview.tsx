@@ -11,7 +11,7 @@ export function FeaturesWithPreview() {
   >('multi-chain-support')
 
   return (
-    <section className="flex flex-col lg:flex-row pt-32 gap-10 px-8">
+    <section className="flex flex-col lg:flex-row pt-32 gap-10 px-8 z-10">
       <motion.div
         whileInView={{
           opacity: [0, 1],

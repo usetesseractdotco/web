@@ -34,7 +34,7 @@ export function Header() {
   return (
     <header
       className={cn(
-        'sticky top-0 items-center justify-between flex w-full mx-auto px-8 py-6',
+        'sticky top-0 items-center justify-between flex w-full mx-auto px-8 py-6 z-[999]',
         {
           'bg-background/10 backdrop-blur-sm border-b border-border/5':
             isScrolled,

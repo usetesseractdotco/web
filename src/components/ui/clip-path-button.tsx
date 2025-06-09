@@ -18,13 +18,13 @@ export function ClipPathButton({
       {...props}
       className={cn(
         'group z-[999] font-mono relative h-12 flex items-center justify-center gap-2 px-3.5 select-none',
-        'bg-muted text-muted-foreground',
+        'bg-muted text-muted-foreground'
       )}
     >
       <motion.div
         aria-hidden="true"
         className={cn(
-          'absolute bg-primary inset-0 flex items-center justify-center gap-2 text-primary-foreground',
+          'absolute bg-primary inset-0 flex items-center justify-center gap-2 text-primary-foreground'
         )}
         initial={{
           clipPath: 'inset(0px 100% 0px 0px)',

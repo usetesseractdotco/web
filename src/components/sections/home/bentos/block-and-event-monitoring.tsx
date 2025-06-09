@@ -17,7 +17,7 @@ export function BlockAndEventMonitoring() {
     ])
 
     const interval = setInterval(() => {
-      setTransactions((prev) => {
+      setTransactions(prev => {
         const newTransactions = [...prev]
         if (newTransactions.length >= 4) {
           newTransactions.pop()
@@ -37,11 +37,11 @@ export function BlockAndEventMonitoring() {
   }, [])
 
   return (
-    <div className="flex flex-col w-full h-[18em] border-b border-l sm:border-r-0 border-r p-4">
-      <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden select-none">
+    <div className="flex h-[18em] w-full flex-col border-r border-b border-l p-4 sm:border-r-0">
+      <div className="flex h-full w-full select-none flex-col items-center justify-center overflow-hidden">
         <LayoutGroup>
           <AnimatePresence mode="popLayout">
-            {transactions.map((transaction) => (
+            {transactions.map(transaction => (
               <motion.div
                 layout
                 layoutId={`transaction-${transaction.id}`}
@@ -56,11 +56,11 @@ export function BlockAndEventMonitoring() {
                     ease: [0.165, 0.84, 0.44, 1],
                   },
                 }}
-                className="flex flex-row items-center h-[2em] justify-between w-full last:border-b-0 border-b"
+                className="flex h-[2em] w-full flex-row items-center justify-between border-b last:border-b-0"
               >
                 <motion.span
                   layout
-                  className="text-muted-foreground text-[6px] sm:text-[8px] md:text-[10px] w-[80px]"
+                  className="w-[80px] text-[6px] text-muted-foreground sm:text-[8px] md:text-[10px]"
                 >
                   {transaction.type}
                 </motion.span>
@@ -68,24 +68,24 @@ export function BlockAndEventMonitoring() {
                 {transaction.type === 'Transaction' ? (
                   <motion.div
                     layout
-                    className="flex flex-row gap-2 items-center justify-end"
+                    className="flex flex-row items-center justify-end gap-2"
                   >
-                    <span className="text-muted-foreground text-[5px] sm:text-[7px] md:text-[9px] w-[30px] text-center">
+                    <span className="w-[30px] text-center text-[5px] text-muted-foreground sm:text-[7px] md:text-[9px]">
                       from
                     </span>
 
-                    <div className="bg-primary w-[90px] p-0.5 md:p-1 text-primary-foreground flex items-center justify-center">
-                      <span className="text-[5px] sm:text-[7px] md:text-[9px] font-mono">
+                    <div className="flex w-[90px] items-center justify-center bg-primary p-0.5 text-primary-foreground md:p-1">
+                      <span className="font-mono text-[5px] sm:text-[7px] md:text-[9px]">
                         {generateRandomAddress()}
                       </span>
                     </div>
 
-                    <span className="text-muted-foreground text-[5px] sm:text-[7px] md:text-[9px] w-[30px] text-center">
+                    <span className="w-[30px] text-center text-[5px] text-muted-foreground sm:text-[7px] md:text-[9px]">
                       to
                     </span>
 
-                    <div className="bg-primary w-[90px] p-0.5 md:p-1 text-primary-foreground flex items-center justify-center">
-                      <span className="text-[5px] sm:text-[7px] md:text-[9px] font-mono">
+                    <div className="flex w-[90px] items-center justify-center bg-primary p-0.5 text-primary-foreground md:p-1">
+                      <span className="font-mono text-[5px] sm:text-[7px] md:text-[9px]">
                         {generateRandomAddress()}
                       </span>
                     </div>
@@ -93,24 +93,24 @@ export function BlockAndEventMonitoring() {
                 ) : (
                   <motion.div
                     layout
-                    className="flex flex-row gap-2 items-center justify-end"
+                    className="flex flex-row items-center justify-end gap-2"
                   >
-                    <span className="text-muted-foreground text-[5px] sm:text-[7px] md:text-[9px] w-[30px] text-center">
+                    <span className="w-[30px] text-center text-[5px] text-muted-foreground sm:text-[7px] md:text-[9px]">
                       address
                     </span>
 
-                    <div className="bg-primary w-[90px] p-0.5 md:p-1 text-primary-foreground flex items-center justify-center">
-                      <span className="text-[5px] sm:text-[7px] md:text-[9px] font-mono">
+                    <div className="flex w-[90px] items-center justify-center bg-primary p-0.5 text-primary-foreground md:p-1">
+                      <span className="font-mono text-[5px] sm:text-[7px] md:text-[9px]">
                         {generateRandomAddress()}
                       </span>
                     </div>
 
-                    <span className="text-muted-foreground text-[5px] sm:text-[7px] md:text-[9px] w-[30px] text-center">
+                    <span className="w-[30px] text-center text-[5px] text-muted-foreground sm:text-[7px] md:text-[9px]">
                       method
                     </span>
 
-                    <div className="bg-primary w-[90px] p-0.5 md:p-1 text-primary-foreground flex items-center justify-center">
-                      <span className="text-[5px] sm:text-[7px] md:text-[9px] font-mono">
+                    <div className="flex w-[90px] items-center justify-center bg-primary p-0.5 text-primary-foreground md:p-1">
+                      <span className="font-mono text-[5px] sm:text-[7px] md:text-[9px]">
                         {generateRandomFunction()}
                       </span>
                     </div>
@@ -122,9 +122,9 @@ export function BlockAndEventMonitoring() {
         </LayoutGroup>
       </div>
 
-      <div className="flex flex-col gap-2 items-start justify-start z-10 bg-background">
-        <h3 className="text-base font-medium">Block and Event Monitoring</h3>
-        <p className="text-sm text-muted-foreground max-w-lg leading-[1.5] tracking-[-0.2]">
+      <div className="z-10 flex flex-col items-start justify-start gap-2 bg-background">
+        <h3 className="font-medium text-base">Block and Event Monitoring</h3>
+        <p className="max-w-lg text-muted-foreground text-sm leading-[1.5] tracking-[-0.2]">
           Track blocks and events in real time.
         </p>
       </div>

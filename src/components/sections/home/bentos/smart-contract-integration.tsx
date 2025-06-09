@@ -2,14 +2,14 @@
 
 import { motion } from 'motion/react'
 
-import { Icons } from '@/components/icons'
+import { icons } from '@/components/icons'
 import { ClipPathButton } from '@/components/ui/clip-path-button'
 
 export function SmartContractIntegration() {
   return (
-    <div className="flex flex-col w-full h-[18em] items-start justify-between border-b border-l sm:border-t p-4">
+    <div className="flex h-[18em] w-full flex-col items-start justify-between border-b border-l p-4 sm:border-t">
       <div
-        className="relative w-full h-full bg-cover bg-center flex flex-col items-center justify-center overflow-hidden"
+        className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden bg-center bg-cover"
         style={{
           backgroundImage: 'url(/smart-contract-bg.png)',
         }}
@@ -28,15 +28,15 @@ export function SmartContractIntegration() {
           viewport={{
             once: true,
           }}
-          className="flex flex-row gap-2.5 pl-3 pr-3.5 items-center justify-center bg-muted text-muted-foreground py-2 border overflow-hidden"
+          className="flex flex-row items-center justify-center gap-2.5 overflow-hidden border bg-muted py-2 pr-3.5 pl-3 text-muted-foreground"
         >
-          <Icons.connection />
+          <icons.connection />
           <span>API</span>
         </motion.div>
 
         <motion.div
           aria-hidden
-          className="w-px h-5 bg-border"
+          className="h-5 w-px bg-border"
           initial={{ height: 0 }}
           animate={{ height: 20 }}
           transition={{ duration: 0.2, ease: 'easeOut', delay: 0.05 }}
@@ -74,7 +74,7 @@ export function SmartContractIntegration() {
 
         <motion.div
           aria-hidden
-          className="w-px h-5 bg-border"
+          className="h-5 w-px bg-border"
           initial={{ height: 0 }}
           whileInView={{ height: 20 }}
           transition={{
@@ -86,7 +86,7 @@ export function SmartContractIntegration() {
         />
 
         <motion.div
-          className="flex flex-row gap-2.5 pl-3 pr-3.5 items-center justify-center bg-muted text-muted-foreground py-2 border"
+          className="flex flex-row items-center justify-center gap-2.5 border bg-muted py-2 pr-3.5 pl-3 text-muted-foreground"
           initial={{ filter: 'blur(4px)', opacity: 0 }}
           whileInView={{
             filter: 'blur(0px)',
@@ -101,14 +101,14 @@ export function SmartContractIntegration() {
             once: true,
           }}
         >
-          <Icons.file />
+          <icons.file />
           <span>Response</span>
         </motion.div>
       </div>
 
-      <div className="flex flex-col gap-2 items-start justify-start pt-3">
-        <h3 className="text-base font-medium">Smart Contract Integration</h3>
-        <p className="text-sm text-muted-foreground max-w-lg leading-[1.5] tracking-[-0.2]">
+      <div className="flex flex-col items-start justify-start gap-2 pt-3">
+        <h3 className="font-medium text-base">Smart Contract Integration</h3>
+        <p className="max-w-lg text-muted-foreground text-sm leading-[1.5] tracking-[-0.2]">
           Easy smart contract calls.
         </p>
       </div>

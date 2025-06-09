@@ -1,10 +1,10 @@
 'use client'
 
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 import { cn } from '@/lib/utils'
 
+import { icons } from './icons'
 import { Button } from './ui/button'
 import { TextScramble } from './ui/text-scramble'
 
@@ -27,28 +27,23 @@ export function Header() {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  }, [handleScroll])
 
   if (!isMounted) return null
 
   return (
     <header
       className={cn(
-        'sticky top-0 items-center justify-between flex w-full mx-auto px-8 py-6',
+        'sticky top-0 z-[999] mx-auto flex w-full items-center justify-between px-8 py-6',
         {
-          'bg-background/10 backdrop-blur-sm border-b border-border/5':
+          'border-border/5 border-b bg-background/10 backdrop-blur-sm':
             isScrolled,
-        },
+        }
       )}
     >
-      <div className="mx-auto max-w-6xl flex items-center justify-between w-full">
-        <Image
-          src="/logo.svg"
-          alt="logo"
-          width={48}
-          height={56}
-          className="invert dark:invert-0"
-        />
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between">
+        <icons.tesseract className="size-10 fill-black dark:fill-white" />
 
         <Button
           size="default"

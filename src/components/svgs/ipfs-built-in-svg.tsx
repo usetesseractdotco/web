@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { useTheme } from 'next-themes'
 
-export function IPFSBuiltInSVG() {
+export function IpfsBuiltInSvg() {
   const { resolvedTheme } = useTheme()
   const isDark = resolvedTheme === 'dark'
 
@@ -22,7 +22,7 @@ export function IPFSBuiltInSVG() {
 
   return (
     <>
-      <div className="md:block hidden w-full h-full">
+      <div className="hidden h-full w-full md:block">
         <svg
           width="100%"
           height="100%"
@@ -30,6 +30,7 @@ export function IPFSBuiltInSVG() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
+          <title>IPFS Built-in</title>
           <rect
             y="30.6"
             width="382"
@@ -292,13 +293,13 @@ export function IPFSBuiltInSVG() {
               }}
               transition={{
                 duration: 1.2,
-                repeat: Infinity,
+                repeat: Number.POSITIVE_INFINITY,
                 repeatDelay: 2,
                 repeatEnd: 0.5,
                 repeatStart: 0.5,
                 repeatSpeed: 1,
               }}
-              key={i}
+              key={path.d}
               d={path.d}
               stroke="#0052FF"
               strokeDasharray="6 6"
@@ -374,7 +375,7 @@ export function IPFSBuiltInSVG() {
         </svg>
       </div>
 
-      <div className="md:hidden block">
+      <div className="block md:hidden">
         <svg
           width="293"
           height="119"
@@ -382,6 +383,7 @@ export function IPFSBuiltInSVG() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
+          <title>IPFS Built-in</title>
           <rect
             x="0.362305"
             y="23.7753"

@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono as GeistMono } from 'next/font/google'
 
+import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
 import { Texture } from '@/components/texture'
 import { ThemeProvider } from '@/components/ui/theme-provider'
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden scroll-smooth antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -42,6 +43,8 @@ export default function RootLayout({
           <Header />
 
           {children}
+
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

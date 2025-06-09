@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils'
 const techs = [
   {
     label: 'NodeJs',
-    icon: <Icons.nodejs className="size-4" />,
+    icon: <icons.nodejs className="size-4" />,
     codeExamples: [
       {
         title: 'events.ts',
